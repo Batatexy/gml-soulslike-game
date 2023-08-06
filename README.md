@@ -6,11 +6,16 @@
 
 <div>
   <p>
-    This project is still in progress, so it will probably have a lot of changes in the future, but for now, it's just some mechanical tests and design studies
+    This project is still in progress, so it will probably have a lot of changes in the future, but for now, im just studing some mechanical tests and design.
   </p>
 
   <p>
-    Some screenshots of how the game looks:
+    Este projeto ainda está em andamento, então provavelmente muitas coisas vão mudar no futuro, mas por agora, estou apenas estudando algumas mecânicas e design.
+  </p>
+  
+
+  <p>
+    Some screenshots of how the game looks: | Algumas prints de como o jogo tá:
   </p>
 </div>
 
