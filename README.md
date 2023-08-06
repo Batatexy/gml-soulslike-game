@@ -1,6 +1,6 @@
 <div>
   <h1>
-    Simple Souls Project
+    Simple Soulslike Project | Projeto de Soulslike Simples
   </h1>
 </div>
 
