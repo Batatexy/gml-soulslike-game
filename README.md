@@ -20,3 +20,5 @@
 </div>
 
 ![Gamemaker](https://github.com/Batatexy/Simple-Souls-Project/assets/141431095/68f325d3-498a-48ee-8833-bfe276e1e11c)
+
+![Gamemaker 1](https://github.com/Batatexy/simple-soulslike-project/assets/141431095/66c6664e-ffd8-4b4f-a025-eac31d1be7e7)
