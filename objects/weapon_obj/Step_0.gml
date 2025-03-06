@@ -1,4 +1,4 @@
-if global.morte = 0
+if player_obj.life > 0
 {
 	if global.atk = 1
 	{

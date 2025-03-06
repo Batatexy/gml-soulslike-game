@@ -53,6 +53,7 @@
     {"id":{"name":"camera_obj","path":"objects/camera_obj/camera_obj.yy",},},
     {"id":{"name":"chest_obj","path":"objects/chest_obj/chest_obj.yy",},},
     {"id":{"name":"enemy1_obj","path":"objects/enemy1_obj/enemy1_obj.yy",},},
+    {"id":{"name":"entity_obj","path":"objects/entity_obj/entity_obj.yy",},},
     {"id":{"name":"mimic_obj","path":"objects/mimic_obj/mimic_obj.yy",},},
     {"id":{"name":"nevoa1","path":"objects/nevoa1/nevoa1.yy",},},
     {"id":{"name":"player_obj","path":"objects/player_obj/player_obj.yy",},},

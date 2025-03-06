@@ -1,15 +1,17 @@
-//Vida e morte
-global.maxLife = 10//Vida máxima
-global.life = global.maxLife
-global.morte = 0
+//Vida e Stamina
+maxLife = 10//Vida máxima
+life = maxLife
+
+maxStamina = 10//Stamina máxima
+stamina = maxStamina
 
 	//Ataque
 	atkvar = 40
 	atktimer = atkvar
-	global.atk = 0
-	global.dmg = 0
-	global.playerhit = 0
-	global.dmgreceive = 0
+	atk = 0
+	dmg = 0
+	playerhit = 0
+	dmgreceive = 0
 
 	//Timer que se toma o dano pra n ficar igual mineirinho
 	global.hitvar = 28//Variavel fixa para o Player e Inimigos
@@ -18,8 +20,8 @@ global.morte = 0
 	hittimer = hitvar
 
 //Velocidade de movimento
-global.spdvar = 1.8
-spd = global.spdvar
+spdvar = 1.8
+spd = spdvar
 spdatk = 0
 
 //Hitbox com paredes e portas
@@ -34,7 +36,7 @@ weapons =
 	[
 		true, //Se a arma está liberada
 		4, //Dano
-		global.spdvar / 1.6, //spdatk
+		player_obj.spdvar / 1.6, //spdatk
 		30, //atkvar
 	],
 	[

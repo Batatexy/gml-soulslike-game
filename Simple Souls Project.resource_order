@@ -28,6 +28,7 @@
     {"name":"cam3","order":15,"path":"objects/cam3/cam3.yy",},
     {"name":"camera_obj","order":12,"path":"objects/camera_obj/camera_obj.yy",},
     {"name":"enemy1_obj","order":1,"path":"objects/enemy1_obj/enemy1_obj.yy",},
+    {"name":"entity_obj","order":16,"path":"objects/entity_obj/entity_obj.yy",},
     {"name":"mimic_obj","order":2,"path":"objects/mimic_obj/mimic_obj.yy",},
     {"name":"nevoa1","order":3,"path":"objects/nevoa1/nevoa1.yy",},
     {"name":"player_obj","order":4,"path":"objects/player_obj/player_obj.yy",},

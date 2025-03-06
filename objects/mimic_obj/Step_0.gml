@@ -1,12 +1,12 @@
-if global.morte=0
+if player_obj.life > 0
 {
-move_towards_point(player_obj.x,player_obj.y,spd)
+	move_towards_point(player_obj.x,player_obj.y,spd)
 }
 else
 {
-move_towards_point(0,0,0)
-atkmode=0
-sprite_index=Sprite5
+	move_towards_point(0,0,0)
+	atkmode = 0
+	sprite_index = Sprite5
 }
 
 if atkmode=0//Modo de ataque OFF
@@ -42,30 +42,33 @@ sprite_index=Sprite5
 }
 else//Modo de ataque ON
 {
-sprite_index=Sprite8
-spd=spdvar
+	sprite_index = Sprite8
+	spd = spdvar
+	
 	if place_meeting(x,y,player_obj)//Mimic encosta no Player
 	{
-	if global.playerhit=0
-	{
-	global.dmgreceive=dmg
-	global.playerhit=1
-	}
-	spd=0
-	atkmode=0
-	atksoundon=1
-	noatktimer=1
-	sprite_index=Sprite5
+		spd = 0
+		atkmode = 0
+		atksoundon = 1
+		noatktimer = 1
+		sprite_index = Sprite5
+		
+		if player_obj.playerhit = 0
+		{
+			global.dmgreceive = dmg
+			player_obj.playerhit = 1
+		}
 	}
 }
-if noatktimer=1
+if noatktimer = 1
 {
-atkmode=0
-noatktimer1-=1
-	if noatktimer1<=0
+	atkmode = 0
+	noatktimer1 -= 1
+
+	if noatktimer1 <= 0
 	{
-	noatktimer1=noatkvar
-	noatktimer=0
+		noatktimer1 = noatkvar
+		noatktimer = 0
 	}
 }
 
@@ -111,11 +114,11 @@ if life<=0{
 }
 
 
-if global.morte=3
-{
-	x=spawnx
-	y=spawny
-	visible=true
-	//Criar um esquema de aleatoridade de vida
-	life=lifevar
-}
+//if global.morte=3
+//{
+//	x=spawnx
+//	y=spawny
+//	visible=true
+//	//Criar um esquema de aleatoridade de vida
+//	life=lifevar
+//}

@@ -91,13 +91,16 @@ if life<=0 and visible=true
 	}
 }
 
-if global.morte=3
-{
-	x=spawnx
-	y=spawny
-	visible=true
-	//Criar um esquema de aleatoridade de vida
-	life=lifevar
-}
+
+
+
+//if global.morte=3
+//{
+//	x=spawnx
+//	y=spawny
+//	visible=true
+//	//Criar um esquema de aleatoridade de vida
+//	life=lifevar
+//}
 
 
