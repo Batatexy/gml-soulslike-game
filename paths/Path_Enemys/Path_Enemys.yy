@@ -1,13 +1,15 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "Path_Enemys",
-  "closed": false,
-  "kind": 0,
-  "parent": {
-    "name": "Paths",
-    "path": "folders/Paths.yy",
+  "$GMPath":"",
+  "%Name":"Path_Enemys",
+  "closed":false,
+  "kind":0,
+  "name":"Path_Enemys",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
   },
-  "points": [],
-  "precision": 4,
+  "points":[],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

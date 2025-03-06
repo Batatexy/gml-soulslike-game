@@ -35,7 +35,7 @@ sprite_index=Sprite5
 		spdtimer=60
 		sprite_index=Sprite5
 		open=0
-		global.vida-=50
+		global.life-=50
 		atksoundon=1	
 		}	
 	}
@@ -78,7 +78,7 @@ atksound=irandom_range(1,3)
 atksoundon=0
 }
 ///////////////////////Dano que o bau toma/////////////////////////////////////////////////////////
-if place_meeting(x,y,weapon_obj) and hit=0 and global.weapon!=0 and noatktimer=0 and global.atk=1 and global.atkwall=0
+if place_meeting(x,y,weapon_obj) and hit=0 and player_obj.selectedWeapon!=0 and noatktimer=0 and global.atk=1 and global.atkwall=0
 {
 hit=1
 dmgsound=irandom_range(1,3)
@@ -113,9 +113,9 @@ if life<=0{
 
 if global.morte=3
 {
-x=spawnx
-y=spawny
-visible=true
-//Criar um esquema de aleatoridade de vida
-life=lifevar
+	x=spawnx
+	y=spawny
+	visible=true
+	//Criar um esquema de aleatoridade de vida
+	life=lifevar
 }

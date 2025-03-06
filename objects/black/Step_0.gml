@@ -47,7 +47,7 @@ aim_obj.image_alpha=1
 instance_destroy(blackbar)
 instance_destroy(youdied)
 global.morte=3
-global.vida=global.vidamax
+global.life = global.maxLife
 player_obj.visible=true
 //Tp nas fogueiras
 player_obj.x=global.tpplacex
