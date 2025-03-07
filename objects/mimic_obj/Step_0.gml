@@ -43,7 +43,7 @@ sprite_index=Sprite5
 else//Modo de ataque ON
 {
 	sprite_index = Sprite8
-	spd = spdvar
+	spd = defaultSpd
 	
 	if place_meeting(x,y,player_obj)//Mimic encosta no Player
 	{

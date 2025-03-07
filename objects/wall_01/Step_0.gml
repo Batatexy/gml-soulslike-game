@@ -8,6 +8,6 @@ if global.wall01=1
 }
 if image_alpha<=-0.15
 {
-	instance_destroy(walldoor2)
+	instance_destroy(walldoor_02)
 	instance_destroy()
 }

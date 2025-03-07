@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"weaponenemy1",
+  "%Name":"fog_obj",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"weaponenemy1",
+  "name":"fog_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objetos/Entidades.yy",
+    "name":"Instances",
+    "path":"folders/Objetos/Instances.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,9 +32,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"hollow",
-    "path":"sprites/hollow/hollow.yy",
+    "name":"Sprite31",
+    "path":"sprites/Sprite31/Sprite31.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

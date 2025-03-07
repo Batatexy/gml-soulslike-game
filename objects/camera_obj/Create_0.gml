@@ -1,15 +1,18 @@
-global.camera=0
+global.camera = 0
 
-camwidth=416
-camheight=234
+camwidth = 416
+camheight = 234
 
-follow=player_obj
-smooth=1
-hard=10
-soft=50
+follow = player_obj
+smooth = 1
+hard = 10
+soft = 50
 
-xto=x
-yto=y
+xto = x
+yto = y
 
-zoomx=camwidth
-zoomy=camheight
+zoomx = camwidth
+zoomy = camheight
+
+blackScreenAlpha = 0
+draw_set_alpha(blackScreenAlpha)

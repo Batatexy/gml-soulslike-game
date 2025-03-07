@@ -4,7 +4,7 @@ if visible=true and spawnnumber>0
 	{
 		//Desenvolver um sistema de id mesmo com vários objetos iguais
 		global.enemysides+=1
-		instance_create_layer(x, y, "Hud", weaponenemy1)
+		instance_create_layer(x, y, "Hud", weaponenemy_01_obj)
 		atk=1
 	}
 
@@ -15,17 +15,17 @@ if visible=true and spawnnumber>0
 
 		if triggertime<=0
 		{
-			triggertime=triggervar
-			atk=0
+			triggertime = triggervar
+			atk = 0
 		}
 	}
 
 	//Seguir o player ou voltar pro spawn
-	if atk=0
+	if atk = 0
 	{
-		var x1=x
-		var y1=y
-		spd=spdvar
+		var x1 = x
+		var y1 = y
+		spd = defaultSpd
 
 		if global.triggerenemy1<global.triggerenemyvar and player_obj.visible=true
 		{

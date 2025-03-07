@@ -10,18 +10,18 @@ if life > 0
 		spd -= spdatk
 		atk = 1
 		global.sides += 1
-		player_obj.atktimer = atkvar
+		atktimer = atkvar
 	}
 
-	if player_obj.atk = 1
+	if atk = 1
 	{
-	   player_obj.atktimer -= 1
+	   atktimer -= 1
 
-		if player_obj.atktimer <= 0
+		if atktimer <= 0
 		{
-			spd = spdvar
-			player_obj.atktimer = atkvar
-			player_obj.atk = 0
+			spd = defaultSpd
+			atktimer = atkvar
+			atk = 0
 		}
 	}
 
@@ -31,7 +31,7 @@ if life > 0
       {
          selectedWeapon = 1
          global.dmg = 3
-         spdatk = spdvar / 1.1
+         spdatk = defaultSpd / 1.1
          atkvar = 30
          weapon_obj.visible = true
       }
@@ -39,7 +39,7 @@ if life > 0
       {
          selectedWeapon = 2
          global.dmg = 3
-         spdatk = spdvar/1.1
+         spdatk = defaultSpd/1.1
          atkvar = 30
          weapon_obj.visible = true
       }
@@ -47,7 +47,7 @@ if life > 0
       {
          selectedWeapon = 3
          global.dmg = 0
-         spdatk = spdvar/1
+         spdatk = defaultSpd/1
          atkvar = 100
          weapon_obj.visible = true
       }
@@ -55,7 +55,7 @@ if life > 0
       {
          selectedWeapon = 4
          global.dmg = 0
-         spdatk = global.spdvar/1
+         spdatk = defaultSpd/1
          atkvar = 10
          weapon_obj.visible = true
       }
@@ -86,17 +86,17 @@ if life > 0
 	}
 
 	//Troca de Camera em algumas areas
-	if player_obj.visible = true
+	if visible = true
 	{
-		if place_meeting(x,y,triggerarea1)
+		if place_meeting(x,y,triggerarea_01)
 		{
 			global.camera = 1
 		}
-		else if place_meeting(x,y,triggerarea2)
+		else if place_meeting(x,y,triggerarea_02)
 		{
 			global.camera = 2
 		}
-		else if place_meeting(x,y,triggerarea3)
+		else if place_meeting(x,y,triggerarea_03)
 		{
 			global.camera = 3
 		}
@@ -155,36 +155,34 @@ if life > 0
 //Morte
 else
 {
+	deathTimer--
+	aim_obj.image_alpha -= 0.025
+}
+
+
+if deathTimer < deathTimerVar
+{
 	atk = 0
 	speed = 0
 	spd = 0
-	
-	x = player_obj.x
-	y = player_obj.y
-	
+		
 	global.tp = 1
-	deathTimer -= 1
 	
-	if deathTimer > 1000 and deathTimer < deathTimerVar
+	//Gambiarra
+	if life > 0
 	{
-		aim_obj.image_alpha -= 0.025
+		deathTimer -= 1
 	}
 	
 	//You Died
-	if deathTimer = 1000
+	if deathTimer = 990
 	{
-		instance_create_layer(x,y,"Hitboxes",blackbar)
-		instance_create_layer(x,y,"Hud",youdied)
-	}
-	
-	//Escurecer
-	if deathTimer > 630 and deathTimer <= 850
-	{
-		
+		instance_create_layer(x,y,"Death",blackbar)
+		instance_create_layer(x,y,"Camera",youdied)
 	}
 	
 	//Tp pra fogueira
-	if deathTimer = 630
+	if deathTimer = 655
 	{
 		camera_obj.smooth = 1
 		aim_obj.image_alpha = 1
@@ -192,32 +190,29 @@ else
 		instance_destroy(youdied)
 		
 		//Tp nas fogueiras
-		player_obj.x = global.tpplacex
-		player_obj.y = global.tpplacey
+		x = global.tpplacex
+		y = global.tpplacey
 	}
-
+	
 	//Reviver
-	if deathTimer > 440 and deathTimer <= 530
+	if deathTimer = 650
 	{
-		player_obj.life = player_obj.maxLife
-		player_obj.spd += 0.02
-		player_obj.atk = 2
+		life = maxLife
+		atk = 2
+	}
 
-		if player_obj.spd > player_obj.spdvar
+	//Reviver // Começa caminhando meio lento
+	if deathTimer <= 650
+	{
+		spd += 0.02
+		
+		if spd >= defaultSpd
 		{
-			player_obj.spd = player_obj.spdvar
+			spd = defaultSpd
+			atk = 0
+			global.tp = 0
+			deathTimer = deathTimerVar
 		}
-	}
-	if deathTimer = 435
-	{
-		player_obj.atk = 0
-	}
-
-
-	if deathTimer <= 300
-	{
-		global.tp = 0
-		deathTimer = deathTimerVar
 	}
 }
 

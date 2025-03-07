@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"triggerarea2",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"triggerarea_03",
+  "eventList":[],
   "managed":true,
-  "name":"triggerarea2",
+  "name":"triggerarea_03",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objetos/Entidades.yy",
+    "name":"Entities",
+    "path":"folders/Objetos/Entities.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"walldoor2",
+  "%Name":"walldoor_02",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"walldoor2",
+  "name":"walldoor_02",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objetos/Entidades.yy",
+    "name":"Entities",
+    "path":"folders/Objetos/Entities.yy",
   },
   "parentObjectId":null,
   "persistent":false,

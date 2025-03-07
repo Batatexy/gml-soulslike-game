@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"triggerarea3",
-  "eventList":[],
+  "%Name":"door_01",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"triggerarea3",
+  "name":"door_01",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objetos/Entidades.yy",
+    "name":"Entities",
+    "path":"folders/Objetos/Entities.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,12 +30,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite28",
-    "path":"sprites/Sprite28/Sprite28.yy",
+    "name":"Sprite30",
+    "path":"sprites/Sprite30/Sprite30.yy",
   },
-  "spriteMaskId":{
-    "name":"Sprite28",
-    "path":"sprites/Sprite28/Sprite28.yy",
-  },
-  "visible":false,
+  "spriteMaskId":null,
+  "visible":true,
 }

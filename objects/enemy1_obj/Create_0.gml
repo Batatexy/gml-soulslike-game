@@ -4,8 +4,8 @@ life = lifevar
 spawnnumber = 10
 
 //Variaveis de velocidade
-spdvar = 1.2
-spd = spdvar
+defaultSpd = 1.2
+spd = defaultSpd
 
 //Variaveis de ataque
 distance = 32

@@ -20,8 +20,8 @@ hitvar = global.hitvar
 hittimer = hitvar
 
 //Velocidade de movimento
-spdvar = 1.8
-spd = spdvar
+defaultSpd = 1.8
+spd = defaultSpd
 spdatk = 0
 
 //Hitbox com paredes e portas
@@ -36,7 +36,7 @@ weapons =
 	[
 		true, //Se a arma está liberada
 		4, //Dano
-		player_obj.spdvar / 1.6, //spdatk
+		player_obj.defaultSpd / 1.6, //spdatk
 		30, //atkvar
 	],
 	[
@@ -66,7 +66,7 @@ global.tpplacey=y
 
 
 
-deathTimerVar = 1100
+deathTimerVar = 1000
 deathTimer = deathTimerVar
 
 global.tp = 0

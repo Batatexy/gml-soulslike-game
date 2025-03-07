@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"porta",
+  "%Name":"walldoor_01",
   "eventList":[],
   "managed":true,
-  "name":"porta",
+  "name":"walldoor_01",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objetos/Entidades.yy",
+    "name":"Entities",
+    "path":"folders/Objetos/Entities.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite30",
-    "path":"sprites/Sprite30/Sprite30.yy",
+    "name":"Sprite32",
+    "path":"sprites/Sprite32/Sprite32.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
