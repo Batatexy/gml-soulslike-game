@@ -1,6 +1,6 @@
 if player_obj.life > 0
 {
-	if global.atk = 1
+	if player_obj.atk = 1
 	{
 		if global.sides = 0//Armas que rodam:
 		{
@@ -11,12 +11,12 @@ if player_obj.life > 0
 				visible=true
 				sprite_index=swordatk1
 
-				if global.atktimer>=29
+				if player_obj.atktimer>=29
 				{
 					image_angle = point_direction(x, y, mouse_x, mouse_y)-90
 					direction=point_direction(x, y, mouse_x, mouse_y)-90
 				}
-				if global.atktimer>=0
+				if player_obj.atktimer>=0
 				{
 					image_angle+=6.7
 				}
@@ -31,12 +31,12 @@ if player_obj.life > 0
 				visible=true
 				sprite_index=swordatk2
 
-				if global.atktimer>=29
+				if player_obj.atktimer>=29
 				{
 					image_angle = point_direction(x, y, mouse_x, mouse_y)+90
 					direction=point_direction(x, y, mouse_x, mouse_y)+90
 				}
-				if global.atktimer>=0
+				if player_obj.atktimer>=0
 				{
 					image_angle-=6.7
 				}
@@ -45,20 +45,20 @@ if player_obj.life > 0
 				
 		if player_obj.selectedWeapon = 2//Lança
 		{
-			if global.atktimer>=29//Determinar a direção da lança
+			if player_obj.atktimer>=29//Determinar a direção da lança
 			{		
 				x=player_obj.x
 				y=player_obj.y
 				image_angle = point_direction(x, y, mouse_x, mouse_y)
 				direction=point_direction(x, y, mouse_x, mouse_y)
 			}
-			if global.atktimer>24//Velocidade que vai pra frente
+			if player_obj.atktimer>24//Velocidade que vai pra frente
 			{
 				visible=true
 				sprite_index=spear
 				speed=9
 			}
-			if global.atktimer>=0 and global.atktimer<=24//Velocidade que vai pra trás
+			if player_obj.atktimer>=0 and player_obj.atktimer<=24//Velocidade que vai pra trás
 			{
 				direction=point_direction(x, y, player_obj.x, player_obj.y)
 				speed=1.8
@@ -69,7 +69,7 @@ if player_obj.life > 0
 				sprite_index=hollow
 				}
 			}
-			if global.atktimer<=0
+			if player_obj.atktimer<=0
 			{
 			visible=false
 			sprite_index=hollow

@@ -1,23 +1,23 @@
 //Vida e Stamina
-maxLife = 10//Vida máxima
+maxLife = 1//Vida máxima
 life = maxLife
 
 maxStamina = 10//Stamina máxima
 stamina = maxStamina
 
-	//Ataque
-	atkvar = 40
-	atktimer = atkvar
-	atk = 0
-	dmg = 0
-	playerhit = 0
-	dmgreceive = 0
+//Ataque
+atkvar = 40
+atktimer = atkvar
+atk = 0
+dmg = 0
+playerhit = 0
+dmgreceive = 0
 
-	//Timer que se toma o dano pra n ficar igual mineirinho
-	global.hitvar = 28//Variavel fixa para o Player e Inimigos
-	global.hittimer = global.hitvar
-	hitvar = global.hitvar
-	hittimer = hitvar
+//Timer que se toma o dano pra n ficar igual mineirinho
+global.hitvar = 28//Variavel fixa para o Player e Inimigos
+global.hittimer = global.hitvar
+hitvar = global.hitvar
+hittimer = hitvar
 
 //Velocidade de movimento
 spdvar = 1.8
@@ -66,5 +66,8 @@ global.tpplacey=y
 
 
 
+deathTimerVar = 1100
+deathTimer = deathTimerVar
 
+global.tp = 0
 

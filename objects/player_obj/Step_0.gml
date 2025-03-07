@@ -5,27 +5,27 @@ var up = keyboard_check(ord("W")) or keyboard_check(vk_up)
 
 if life > 0
 {
-	if mouse_check_button_pressed(mb_left) and selectedWeapon != 0 and global.atk=0 and playerhit = 0 
+	if mouse_check_button_pressed(mb_left) and selectedWeapon != 0 and atk=0 and playerhit = 0 
 	{
 		spd -= spdatk
-		global.atk = 1
+		atk = 1
 		global.sides += 1
-		global.atktimer = atkvar
+		player_obj.atktimer = atkvar
 	}
 
-	if global.atk = 1
+	if player_obj.atk = 1
 	{
-	   global.atktimer -= 1
+	   player_obj.atktimer -= 1
 
-		if global.atktimer <= 0
+		if player_obj.atktimer <= 0
 		{
 			spd = spdvar
-			global.atktimer = atkvar
-			global.atk = 0
+			player_obj.atktimer = atkvar
+			player_obj.atk = 0
 		}
 	}
 
-   if global.atk = 0
+   if atk = 0
    {
       if keyboard_check_pressed(ord("1")) and weapons[0][0] = true
       {
@@ -61,8 +61,6 @@ if life > 0
       }
    }
    
-   
-   
    //Tomar Dano
 	if playerhit = 1
 	{
@@ -72,11 +70,12 @@ if life > 0
 
 		if hittimer = 27
 		{
-		   global.life -= global.dmgreceive
+		   life -= dmgreceive
 		}
+		
 		if hittimer <= 0
 		{
-		   hittimer  =hitvar
+		   hittimer = hitvar
 		   playerhit = 0
 		}
 	}
@@ -85,7 +84,6 @@ if life > 0
 	   sprite_index = Sprite3
 	   image_alpha = 1
 	}
-
 
 	//Troca de Camera em algumas areas
 	if player_obj.visible = true
@@ -108,74 +106,119 @@ if life > 0
 		}
 	}
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   //Movimentação
-   if (right) && (up) and !place_meeting(x+hb,y-hb , wall)
+	//Movimentação
+	if (right) && (up) and !place_meeting(x+hb,y-hb , wall)
 	{
-	   direction = 45
-	   speed = spd
+		direction = 45
+		speed = spd
 	}
 	else if (right) && (down) and !place_meeting(x+hb,y+hb , wall)
 	{
-	   direction = 315
-	   speed = spd
+		direction = 315
+		speed = spd
 	}
 	else if (left && up) and !place_meeting(x-hb,y-hb , wall)
 	{
-	   direction = 135
-	   speed = spd
+		direction = 135
+		speed = spd
 	}
 	else if (left && down) and !place_meeting(x-hb,y+hb , wall)
 	{
-	   direction = 225
-	   speed = spd
+		direction = 225
+		speed = spd
 	}
 	else if right and !place_meeting(x+hb,y , wall)
 	{
-	   direction = 0
-	   speed = spd
+		direction = 0
+		speed = spd
 	}
 	else if up and !place_meeting(x,y-hb , wall)
 	{
-	   direction = 90
-	   speed = spd
+		direction = 90
+		speed = spd
 	}
 	else if left and !place_meeting(x-hb,y , wall)
 	{
-	   direction = 180
-	   speed = spd
+		direction = 180
+		speed = spd
 	}
 	else if down and !place_meeting(x,y+hb , wall)
 	{
-	   direction = 270
-	   speed = spd
+		direction = 270
+		speed = spd
 	}
 	else
 	{
-	   speed = 0
+		speed = 0
 	} 
 }
 //Morte
 else
 {
-	global.atk = 0
+	atk = 0
 	speed = 0
 	spd = 0
+	
+	x = player_obj.x
+	y = player_obj.y
+	
+	global.tp = 1
+	deathTimer -= 1
+	
+	if deathTimer > 1000 and deathTimer < deathTimerVar
+	{
+		aim_obj.image_alpha -= 0.025
+	}
+	
+	//You Died
+	if deathTimer = 1000
+	{
+		instance_create_layer(x,y,"Hitboxes",blackbar)
+		instance_create_layer(x,y,"Hud",youdied)
+	}
+	
+	//Escurecer
+	if deathTimer > 630 and deathTimer <= 850
+	{
+		
+	}
+	
+	//Tp pra fogueira
+	if deathTimer = 630
+	{
+		camera_obj.smooth = 1
+		aim_obj.image_alpha = 1
+		instance_destroy(blackbar)
+		instance_destroy(youdied)
+		
+		//Tp nas fogueiras
+		player_obj.x = global.tpplacex
+		player_obj.y = global.tpplacey
+	}
+
+	//Reviver
+	if deathTimer > 440 and deathTimer <= 530
+	{
+		player_obj.life = player_obj.maxLife
+		player_obj.spd += 0.02
+		player_obj.atk = 2
+
+		if player_obj.spd > player_obj.spdvar
+		{
+			player_obj.spd = player_obj.spdvar
+		}
+	}
+	if deathTimer = 435
+	{
+		player_obj.atk = 0
+	}
+
+
+	if deathTimer <= 300
+	{
+		global.tp = 0
+		deathTimer = deathTimerVar
+	}
 }
 
 

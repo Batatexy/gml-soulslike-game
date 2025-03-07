@@ -45,7 +45,6 @@
   "name":"Simple Souls Project",
   "resources":[
     {"id":{"name":"aim_obj","path":"objects/aim_obj/aim_obj.yy",},},
-    {"id":{"name":"black","path":"objects/black/black.yy",},},
     {"id":{"name":"blackbar","path":"objects/blackbar/blackbar.yy",},},
     {"id":{"name":"cam1","path":"objects/cam1/cam1.yy",},},
     {"id":{"name":"cam2","path":"objects/cam2/cam2.yy",},},

@@ -21,7 +21,7 @@ sprite_index=Sprite5
 	{
 		player_obj.speed=0
 		player_obj.spd=0
-		global.atk=2
+		player_obj.atk=2
 		if spdtimer<=0
 		{
 		sprite_index=Sprite8
@@ -81,7 +81,7 @@ atksound=irandom_range(1,3)
 atksoundon=0
 }
 ///////////////////////Dano que o bau toma/////////////////////////////////////////////////////////
-if place_meeting(x,y,weapon_obj) and hit=0 and player_obj.selectedWeapon!=0 and noatktimer=0 and global.atk=1 and global.atkwall=0
+if place_meeting(x,y,weapon_obj) and hit=0 and player_obj.selectedWeapon!=0 and noatktimer=0 and player_obj.atk=1 and global.atkwall=0
 {
 hit=1
 dmgsound=irandom_range(1,3)
@@ -89,7 +89,7 @@ dmgsound=irandom_range(1,3)
 	if dmgsound=2{audio_play_sound(Mimic2,0,false,0.6)}
 	if dmgsound=3{audio_play_sound(Mimic3,0,false,0.6)}
 	
-	if global.atk=1{life-=global.dmg}
+	if player_obj.atk=1{life-=global.dmg}
 }
 
 if hit=1{
