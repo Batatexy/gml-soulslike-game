@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite5",
-    "path":"sprites/Sprite5/Sprite5.yy",
+    "name":"chest_spr",
+    "path":"sprites/chest_spr/chest_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,19 +1,19 @@
-if visible=true and spawnnumber>0
+if visible = true and spawnnumber > 0
 {
-	if atk=0 and hit=0 and distance_to_object(player_obj)<distance and player_obj.visible=true
+	if atk = 0 and hit = 0 and distance_to_object(player_obj) < distance and player_obj.visible = true
 	{
 		//Desenvolver um sistema de id mesmo com vários objetos iguais
-		global.enemysides+=1
+		global.enemysides += 1
 		instance_create_layer(x, y, "Hud", weaponenemy_01_obj)
-		atk=1
+		atk = 1
 	}
 
-	if atk=1
+	if atk = 1
 	{
-		triggertime-=1
-		spd=0
+		triggertime -= 1
+		spd = 0
 
-		if triggertime<=0
+		if triggertime <= 0
 		{
 			triggertime = triggervar
 			atk = 0
@@ -27,10 +27,10 @@ if visible=true and spawnnumber>0
 		var y1 = y
 		spd = defaultSpd
 
-		if global.triggerenemy1<global.triggerenemyvar and player_obj.visible=true
+		if global.triggerenemy1 < global.triggerenemyvar and player_obj.visible = true
 		{
-			var x2=(player_obj.x div aim_obj.cell_t)*aim_obj.cell_t+(aim_obj.cell_t/2)
-			var y2=(player_obj.y div aim_obj.cell_t)*aim_obj.cell_t+(aim_obj.cell_t/2)
+			var x2=(player_obj.x div aim_obj.cell_t) * aim_obj.cell_t + (aim_obj.cell_t/2)
+			var y2=(player_obj.y div aim_obj.cell_t) * aim_obj.cell_t + (aim_obj.cell_t/2)
 
 			if (mp_grid_path(aim_obj.mp_grid,path,x1,y1,x2,y2,true))
 			{
@@ -38,9 +38,10 @@ if visible=true and spawnnumber>0
 			}
 		}
 		else
-		{//Melhorar sa porra em
-			var x2=(spawnx div aim_obj.cell_t)*aim_obj.cell_t+(aim_obj.cell_t/2)
-			var y2=(spawny div aim_obj.cell_t)*aim_obj.cell_t+(aim_obj.cell_t/2)
+		{
+			//Melhorar sa porra em
+			var x2 = (spawnx div aim_obj.cell_t) * aim_obj.cell_t + (aim_obj.cell_t/2)
+			var y2 = (spawny div aim_obj.cell_t) * aim_obj.cell_t + (aim_obj.cell_t/2)
 
 			if (mp_grid_path(aim_obj.mp_grid,path,x1,y1,x2,y2,true))
 			{
@@ -54,40 +55,43 @@ if visible=true and spawnnumber>0
 	{
 		path_clear_points(path)
 	}
-		spd=0
-		speed=0
+		spd = 0
+		speed = 0
 	}
 
 	if place_meeting(x,y,weapon_obj) and hit = 0 and player_obj.selectedWeapon != 0 and player_obj.atk != 0 and global.atkwall = 0
 	{
-	hit=1
-		if player_obj.atk=1{life -= global.dmg}
-	}
-	if hit=1
-	{
-		hittimer-=1
-		spd/=1.05
-		sprite_index=Sprite19
-
-		if hittimer<=0
+		hit = 1
+		if player_obj.atk = 1
 		{
-			sprite_index=Sprite1
-			hittimer=hitvar
-			hit=0
+			life -= global.dmg
+		}
+	}
+	if hit = 1
+	{
+		hittimer -= 1
+		spd /= 1.05
+		image_index = 1
+
+		if hittimer <= 0
+		{
+			image_index = 0
+			hittimer = hitvar
+			hit = 0
 		}
 	}
 }
 
-if life<=0 and visible=true
+if life <= 0 and visible = true
 {
-	spawnnumber-=1
-	visible=false
-	sprite_index=hollow
+	spawnnumber -= 1
+	visible = false
+	sprite_index = hollow
 
-	if spawnnumber<=0
+	if spawnnumber <= 0
 	{
-		visible=false
-		sprite_index=hollow
+		visible = false
+		sprite_index = hollow
 	}
 }
 

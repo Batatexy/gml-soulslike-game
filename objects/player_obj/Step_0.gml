@@ -157,28 +157,20 @@ else
 {
 	deathTimer--
 	aim_obj.image_alpha -= 0.025
+	
+	atk = 0
+	speed = 0
+	spd = 0
+	global.tp = 1
 }
 
 
 if deathTimer < deathTimerVar
 {
-	atk = 0
-	speed = 0
-	spd = 0
-		
-	global.tp = 1
-	
 	//Gambiarra
 	if life > 0
 	{
 		deathTimer -= 1
-	}
-	
-	//You Died
-	if deathTimer = 990
-	{
-		instance_create_layer(x,y,"Death",blackbar)
-		instance_create_layer(x,y,"Camera",youdied)
 	}
 	
 	//Tp pra fogueira
@@ -186,8 +178,6 @@ if deathTimer < deathTimerVar
 	{
 		camera_obj.smooth = 1
 		aim_obj.image_alpha = 1
-		instance_destroy(blackbar)
-		instance_destroy(youdied)
 		
 		//Tp nas fogueiras
 		x = global.tpplacex
@@ -202,7 +192,7 @@ if deathTimer < deathTimerVar
 	}
 
 	//Reviver // Começa caminhando meio lento
-	if deathTimer <= 650
+	if deathTimer < 650
 	{
 		spd += 0.02
 		
@@ -211,8 +201,12 @@ if deathTimer < deathTimerVar
 			spd = defaultSpd
 			atk = 0
 			global.tp = 0
-			deathTimer = deathTimerVar
 		}
+	}
+	
+	if deathTimer < 450
+	{
+		deathTimer = deathTimerVar
 	}
 }
 

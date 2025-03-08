@@ -51,7 +51,6 @@ weapons =
 		false,
 
 	],
-	
 ]
 
 //Chaves

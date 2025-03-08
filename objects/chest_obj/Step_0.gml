@@ -11,7 +11,7 @@ if open=1
 
 	if opentimer<=0
 	{
-		sprite_index=Sprite6
+		image_index = 1
 	}
 	
 	if opentimer<-50
