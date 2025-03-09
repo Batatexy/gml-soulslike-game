@@ -1,0 +1,1 @@
+touchedFog = false

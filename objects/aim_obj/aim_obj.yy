@@ -11,8 +11,8 @@
   "name":"aim_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Entidades",
-    "path":"folders/Objetos/Entidades.yy",
+    "name":"Instances",
+    "path":"folders/Objetos/Instances.yy",
   },
   "parentObjectId":null,
   "persistent":false,

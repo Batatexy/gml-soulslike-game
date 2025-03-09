@@ -1,16 +1,18 @@
 //Variaveis de vida
-lifevar=10
-life=lifevar
-spawnnumber=10
-//Variaveis de velocidade
-spdvar=1.2
-spd=spdvar
-//Variaveis de ataque
-distance=32
-atk=0
+lifevar = 10
+life = lifevar
+spawnnumber = 10
 
-triggervar=80
-triggertime=triggervar
+//Variaveis de velocidade
+defaultSpd = 1.2
+spd = defaultSpd
+
+//Variaveis de ataque
+distance = 32
+atk = 0
+
+triggervar = 80
+triggertime = triggervar
 global.enemysides=0
 
 hit=0
