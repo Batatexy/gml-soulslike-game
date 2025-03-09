@@ -12,13 +12,13 @@ else
 if atkmode=0//Modo de ataque OFF
 {
 sprite_index = chest_spr
-	if open=0 and place_meeting(x,y,player_obj) and keyboard_check_pressed(ord("E"))
+	if open = 0 and place_meeting(x,y,player_obj) and player_obj.actions[4]
 	{// Abriu o bau kkkkkkkkk
-		open=1
+		open = 1
 		audio_play_sound(opensound,0,false)
 	}
 	
-	if open=1
+	if open = 1
 	{
 		player_obj.speed = 0
 		player_obj.spd = 0
@@ -26,7 +26,7 @@ sprite_index = chest_spr
 		
 		if spdtimer <= 0
 		{
-			sprite_index=Sprite8
+			sprite_index = Sprite8
 		}
 		
 		if spdtimer >- 140
@@ -75,27 +75,27 @@ if noatktimer = 1
 	}
 }
 
-if atksoundon=1
+if atksoundon = 1
 {
-	atksound=irandom_range(1,3)
+	atksound = irandom_range(1,3)
 	
-	if atksound=1{audio_play_sound(Mimic6,0,false,0.6)}
-	if atksound=2{audio_play_sound(Mimic7,0,false,0.6)}
-	if atksound=3{audio_play_sound(Mimic8,0,false,0.6)}
+	if atksound = 1{audio_play_sound(Mimic6,0,false,0.6)}
+	if atksound = 2{audio_play_sound(Mimic7,0,false,0.6)}
+	if atksound = 3{audio_play_sound(Mimic8,0,false,0.6)}
 	
-	atksoundon=0
+	atksoundon = 0
 }
 ///////////////////////Dano que o bau toma/////////////////////////////////////////////////////////
-if place_meeting(x,y,weapon_obj) and hit=0 and player_obj.selectedWeapon!=0 and noatktimer=0 and player_obj.atk=1 and global.atkwall=0
+if place_meeting(x,y,weapon_obj) and hit = 0 and player_obj.selectedWeapon != 0 and noatktimer=0 and player_obj.atk = 1 and global.atkwall = 0
 {
-	hit=1
+	hit = 1
 	dmgsound = irandom_range(1,3)
 	
-	if dmgsound=1{audio_play_sound(Mimic1,0,false,0.6)}
-	if dmgsound=2{audio_play_sound(Mimic2,0,false,0.6)}
-	if dmgsound=3{audio_play_sound(Mimic3,0,false,0.6)}
+	if dmgsound = 1{audio_play_sound(Mimic1,0,false,0.6)}
+	if dmgsound = 2{audio_play_sound(Mimic2,0,false,0.6)}
+	if dmgsound = 3{audio_play_sound(Mimic3,0,false,0.6)}
 	
-	if player_obj.atk=1{life-=global.dmg}
+	if player_obj.atk = 1{life -= global.dmg}
 }
 
 if hit = 1

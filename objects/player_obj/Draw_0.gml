@@ -1,4 +1,2 @@
 draw_self()
 
-
-

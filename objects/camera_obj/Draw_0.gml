@@ -1,41 +1,38 @@
 //You Died
 if player_obj.deathTimer > 660 and player_obj.deathTimer < 990
 {
-	youDiedValues[0][2] += 0.025
+	youDiedAlpha += 0.025
+	youDiedBarAlpha += 0.025
 	
-	youDiedValues[1][0] += 0.002125
-	youDiedValues[1][1] += 0.00125
-	youDiedValues[1][2] += 0.025
+	youDiedXscale += 0.002125
+	youDiedYscale += 0.00125
 	
-	draw_sprite_ext(you_died_spr, 0, x, y, youDiedValues[0][0], youDiedValues[0][1], 0, c_white, youDiedValues[0][2]);
-	draw_sprite_ext(you_died_spr, 1, x, y, youDiedValues[1][0], youDiedValues[1][1], 0, c_white, youDiedValues[1][2]);
+	
+	draw_sprite_ext(you_died_spr, 0, x, y, youDiedBarXscale, youDiedBarYscale, 0, c_white, youDiedBarAlpha);
+	draw_sprite_ext(you_died_spr, 1, x, y, youDiedXscale, youDiedYscale, 0, c_white, youDiedAlpha);
 }
 
 //Escurecer
-if player_obj.deathTimer > 660 and player_obj.deathTimer <= 990
-{
-	blackScreenAlpha += 0.003
-}
+if player_obj.deathTimer > 660 and player_obj.deathTimer <= 990{blackScreenAlpha += 0.003}
 
-if player_obj.deathTimer = 655
-{
-	youDiedValues = defaultYouDiedValues
+//Resetar valores do youDied e barra que tem atras dele
+if player_obj.deathTimer < 655
+{ 
+	//Obrigado GameMaker!!!!!!
+	youDiedBarXscale = youDiedBarXscaleVar
+	youDiedBarYscale = youDiedBarYscaleVar
+	youDiedBarAlpha = youDiedBarAlphaVar
+	youDiedXscale = youDiedXscaleVar
+	youDiedYscale = youDiedYscaleVar
+	youDiedAlpha = youDiedAlphaVar
 }
 
 //Clarear
-if player_obj.deathTimer < 650
-{
-	blackScreenAlpha -= 0.0075
-}
+if player_obj.deathTimer < 650{ blackScreenAlpha -= 0.0075 }
 
-
-
-draw_set_color(c_white)
-draw_text(x-120, y+50, youDiedValues)
-
-
-
-
+//Evitar de ultrapassar os valores
+if blackScreenAlpha < 0{ blackScreenAlpha = 0 }
+if blackScreenAlpha > 1{ blackScreenAlpha = 1 }
 
 draw_set_alpha(blackScreenAlpha);
 draw_set_color(c_black)
@@ -47,3 +44,20 @@ draw_rectangle
 	y + window_get_height(),
 	false
 )
+
+
+
+//draw_set_alpha(1);
+//draw_set_color(c_white)
+
+//for (var i = 0; i < array_length(player_obj.buttons); i++)
+//{
+//	draw_text(x,y, player_obj.buttons[i])
+//	draw_text(x,y + 20, player_obj.actions[i])
+//}
+
+
+
+
+
+

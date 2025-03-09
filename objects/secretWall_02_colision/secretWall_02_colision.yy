@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"walldoor_02",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"secretWall_02_colision",
+  "eventList":[],
   "managed":true,
-  "name":"walldoor_02",
+  "name":"secretWall_02_colision",
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",
     "path":"folders/Objetos/Entities.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"wall",
+    "path":"objects/wall/wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

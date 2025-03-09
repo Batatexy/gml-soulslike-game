@@ -1,43 +1,56 @@
-if open=0 and place_meeting(x,y,player_obj) and keyboard_check(ord("E"))
+if open = 0 and place_meeting(x,y,player_obj) and player_obj.actions[4]
 {
-	open=1
 	audio_play_sound(sound,0,false)
+	open = 1
 }
 
-if open=1
+if open = 1
 {
-	player_obj.speed=0
-	opentimer-=1
+	player_obj.canMove = false
+	opentimer--
 
-	if opentimer<=0
+	if opentimer < 45
 	{
 		image_index = 1
 	}
 	
-	if opentimer<-50
+	if opentimer < 0
 	{
-		if place=1
+		switch(place)
 		{
-			player_obj.weapons[0][0] = true
-		}
-		if place=2
-		{
-			global.key1=1
-		}
-		if place=3
-		{
-			player_obj.weapons[1][0] = true
-		}
-		if place=4
-		{
-			player_obj.weapons[2][0] = true
-		}
-		if place=5
-		{
-			player_obj.weapons[3][0] = true
+			case 1:
+			{
+				player_obj.weapons[0][0] = true
+				break
+			}
+			case 2:
+			{
+				player_obj.keys[0] = true
+				break
+			}
+			case 3:
+			{
+				
+				break
+			}
+			case 4:
+			{
+				
+				break
+			}
+			case 5:
+			{
+				
+				break
+			}
+			case 6:
+			{
+				
+				break
+			}
 		}
 
-		
-	open=2
+		player_obj.canMove = true
+		open = 2
 	}
 }

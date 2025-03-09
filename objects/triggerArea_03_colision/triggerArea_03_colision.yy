@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"walldoor_01",
+  "%Name":"triggerArea_03_colision",
   "eventList":[],
   "managed":true,
-  "name":"walldoor_01",
+  "name":"triggerArea_03_colision",
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",
@@ -28,9 +28,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite32",
-    "path":"sprites/Sprite32/Sprite32.yy",
+    "name":"Sprite28",
+    "path":"sprites/Sprite28/Sprite28.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"Sprite28",
+    "path":"sprites/Sprite28/Sprite28.yy",
+  },
   "visible":false,
 }

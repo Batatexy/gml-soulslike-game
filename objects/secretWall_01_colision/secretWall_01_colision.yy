@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"wall_01",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"secretWall_01_colision",
+  "eventList":[],
   "managed":true,
-  "name":"wall_01",
+  "name":"secretWall_01_colision",
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",
     "path":"folders/Objetos/Entities.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"wall",
+    "path":"objects/wall/wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite40",
-    "path":"sprites/Sprite40/Sprite40.yy",
+    "name":"Sprite32",
+    "path":"sprites/Sprite32/Sprite32.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

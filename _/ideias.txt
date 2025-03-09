@@ -1,0 +1,5 @@
+//ideia de quando a espada bater na parede:
+quando atacar a parede, reduz em 1/3 do dano
+segundo ataque em sequencia, reduz 2/3 do dano
+terceiro não ataca, ele trava na parede
+reseta

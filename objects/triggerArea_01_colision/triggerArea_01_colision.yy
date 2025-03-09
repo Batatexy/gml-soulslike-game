@@ -1,9 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"triggerarea_03",
-  "eventList":[],
+  "%Name":"triggerArea_01_colision",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"triggerarea_03",
+  "name":"triggerArea_01_colision",
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",

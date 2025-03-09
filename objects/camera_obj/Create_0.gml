@@ -1,4 +1,4 @@
-global.camera = 0
+camera = 0
 
 camwidth = 416
 camheight = 234
@@ -17,18 +17,25 @@ zoomy = camheight
 blackScreenAlpha = 0
 draw_set_alpha(blackScreenAlpha)
 
-
-
-defaultYouDiedValues = 
-[
-	//Xscale, Yscale, Alpha
-	[0.5, 0.5, 0.0],
-	[1.0, 1.0, 0.0],
-]
-
 //?????????????????????????????????????
-youDiedValues = 
-[
-	[0.5, 0.5, 0.0],
-	[1.0, 1.0, 0.0],
-]
+//Array é meus ovos
+youDiedBarXscaleVar = 0.5
+youDiedBarXscale = youDiedBarXscaleVar
+
+youDiedBarYscaleVar = 0.5
+youDiedBarYscale = youDiedBarYscaleVar
+
+youDiedBarAlphaVar = 0
+youDiedBarAlpha = youDiedBarAlphaVar
+
+youDiedXscaleVar = 1
+youDiedXscale = youDiedXscaleVar
+
+youDiedYscaleVar = 1
+youDiedYscale = youDiedYscaleVar
+
+youDiedAlphaVar = 0
+youDiedAlpha = youDiedAlphaVar
+
+
+

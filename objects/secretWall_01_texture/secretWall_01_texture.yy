@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"triggerarea_02",
+  "%Name":"secretWall_01_texture",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"triggerarea_02",
+  "name":"secretWall_01_texture",
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",
@@ -30,12 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite28",
-    "path":"sprites/Sprite28/Sprite28.yy",
+    "name":"Sprite40",
+    "path":"sprites/Sprite40/Sprite40.yy",
   },
-  "spriteMaskId":{
-    "name":"Sprite28",
-    "path":"sprites/Sprite28/Sprite28.yy",
-  },
-  "visible":false,
+  "spriteMaskId":null,
+  "visible":true,
 }
