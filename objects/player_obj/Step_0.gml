@@ -12,7 +12,6 @@ for (var i = 0; i < array_length(buttons); i++)
 		{
 			actions[i] = mouse_check_button_pressed(buttons[i][0])
 		}
-		
 	}
 	//Teclado
 	else
@@ -33,84 +32,67 @@ if life > 0
 	//Abrir baus, portas
 	if canMove
 	{
-		if actions[13] and selectedWeapon != 0 and atk=0 and playerhit = 0 
+		if actions[13] and selectedWeapon != 0 and atk = 0 and playerhit = 0 
 		{
-			spd -= spdatk
+			spd -= weapons[selectedWeapon][3]
 			atk = 1
-			global.sides += 1
-			atktimer = atkvar
+			sides += 1
+			atktimer = weapons[selectedWeapon][4]
 		}
 
 		if atk = 1
 		{
-		   atktimer -= 1
+			atktimer -= 1
 
 			if atktimer <= 0
 			{
 				spd = defaultSpd
-				atktimer = atkvar
+				atktimer = weapons[selectedWeapon][4]
 				atk = 0
 			}
 		}
 
-	   if atk = 0
-	   {
-	      if actions[9] and weapons[0][0] = true
-	      {
-	         selectedWeapon = 1
-	         global.dmg = 3
-	         spdatk = defaultSpd / 1.1
-	         atkvar = 30
-	         weapon_obj.visible = true
-	      }
-	      else if actions[10] and weapons[1][0] = true
-	      {
-	         selectedWeapon = 2
-	         global.dmg = 3
-	         spdatk = defaultSpd/1.1
-	         atkvar = 30
-	         weapon_obj.visible = true
-	      }
-	      else if actions[11] and weapons[2][0] = true
-	      {
-	         selectedWeapon = 3
-	         global.dmg = 0
-	         spdatk = defaultSpd/1
-	         atkvar = 100
-	         weapon_obj.visible = true
-	      }
-	      else if actions[12] and weapons[3][0] = true
-	      {
-	         selectedWeapon = 4
-	         global.dmg = 0
-	         spdatk = defaultSpd/1
-	         atkvar = 10
-	         weapon_obj.visible = true
-	      }
-	   }
+		if atk = 0
+		{
+			if actions[9] and weapons[0][0] = true
+			{
+				selectedWeapon = 1 
+				weapon_obj.visible = true
+			}
+			else if actions[10] and weapons[1][0] = true
+			{
+				selectedWeapon = 2
+				weapon_obj.visible = true
+			}
+			else if actions[11] and weapons[2][0] = true
+			{
+				selectedWeapon = 3
+				weapon_obj.visible = true
+			}
+			else if actions[12] and weapons[3][0] = true
+			{
+				selectedWeapon = 4
+				weapon_obj.visible = true
+			}
+		}
    
-	   //Tomar Dano
+		//Tomar Dano
 		if playerhit = 1
 		{
-		   hittimer -= 1
-		   sprite_index = Sprite20
-		   image_alpha = 0.5
-
-			if hittimer = 27
-			{
-			   life -= dmgreceive
-			}
+			hittimer -= 1
+			sprite_index = Sprite20
+			image_alpha = 0.5
 		
 			if hittimer <= 0
 			{
-			   hittimer = hitvar
-			   playerhit = 0
+				hittimer = hitvar
+				playerhit = 0
 			}
 		}
 		else
 		{
-		   sprite_index = Sprite3
-		   image_alpha = 1
+			sprite_index = Sprite3
+			image_alpha = 1
 		}
 	
 		//Movimentação
@@ -182,6 +164,30 @@ if life > 0
 	else
 	{
 		camera_obj.camera = 0
+	}
+	
+	
+	//Troca de lado de ataque do Player
+	if player_obj.sides >= 2
+	{
+		player_obj.sides = 0
+	}
+	
+	if atkWall = 0
+	{
+		dmg = weapons[selectedWeapon][2]
+	}
+	else if atkWall = 1
+	{
+		dmg = weapons[selectedWeapon][2] * 0.666
+	}
+	else if atkWall = 2
+	{
+		dmg = weapons[selectedWeapon][2] * 0.333
+	}
+	else 
+	{
+		dmg = 0
 	}
 }
 //Morte

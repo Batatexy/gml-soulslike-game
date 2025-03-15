@@ -7,7 +7,7 @@ if x = 3248 and y = 4632
 {
 	place = 1
 }
-if x = 0 and y = 0
+if x = 3008 and y = 4632
 {
 	place = 2
 }

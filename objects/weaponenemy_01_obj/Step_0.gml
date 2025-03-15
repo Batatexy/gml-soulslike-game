@@ -21,7 +21,7 @@ if trigger = 0
 if trigger = 1
 {
 	visible = true
-	triggertime -= 1
+	triggertimer -= 1
 	
 	if sides = 0
 	{
@@ -32,15 +32,15 @@ if trigger = 1
 		image_angle += spd
 	}
 	
-	if triggertime <= 0
+	if triggertimer <= 0
 	{
 		instance_destroy()
 	}
 }
-if place_meeting(x,y,player_obj) and player_obj.playerhit=0
+if place_meeting(x,y,player_obj) and player_obj.playerhit = 0
 {
+	player_obj.life -= 2.5
 	player_obj.playerhit = 1
-	player_obj.dmgreceive = 2.5
 	
 	if sides = 0
 	{

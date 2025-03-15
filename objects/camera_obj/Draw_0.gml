@@ -47,8 +47,8 @@ draw_rectangle
 
 
 
-//draw_set_alpha(1);
-//draw_set_color(c_white)
+draw_set_alpha(1);
+draw_set_color(c_white)
 
 //for (var i = 0; i < array_length(player_obj.buttons); i++)
 //{
@@ -58,6 +58,7 @@ draw_rectangle
 
 
 
-
+//draw_text(x,y,player_obj.keys)
+//draw_text(x,y+ 15,player_obj.doors)
 
 

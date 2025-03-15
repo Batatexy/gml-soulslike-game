@@ -8,12 +8,6 @@ if keyboard_check(ord("R"))
 {
 	game_restart()
 }
-//Troca de lado de ataque do Player
-if global.sides >= 2
-{
-	global.sides = 0
-}
-
 
 if global.triggerenemy1 >= global.triggerenemyvar
 {

@@ -59,12 +59,12 @@ if visible = true and spawnnumber > 0
 		speed = 0
 	}
 
-	if place_meeting(x,y,weapon_obj) and hit = 0 and player_obj.selectedWeapon != 0 and player_obj.atk != 0 and global.atkwall = 0
+	if place_meeting(x,y,weapon_obj) and hit = 0 and player_obj.atk != 0
 	{
 		hit = 1
 		if player_obj.atk = 1
 		{
-			life -= global.dmg
+			life -= player_obj.dmg
 		}
 	}
 	if hit = 1

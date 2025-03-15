@@ -1,5 +1,4 @@
-atkvar=100
-atktimer=atkvar
+atkWallTrigger = true
 
-global.sides=0
-global.atkwall=0
+atkWallTimerVar = 200
+atkWallTimer = atkWallTimerVar

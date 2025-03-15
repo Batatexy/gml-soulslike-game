@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite21",
-    "path":"sprites/Sprite21/Sprite21.yy",
+    "name":"aim_spr",
+    "path":"sprites/aim_spr/aim_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

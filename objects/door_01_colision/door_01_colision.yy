@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"wall",
+  "%Name":"door_01_colision",
   "eventList":[],
   "managed":true,
-  "name":"wall",
+  "name":"door_01_colision",
   "overriddenProperties":[],
   "parent":{
     "name":"Entities",
     "path":"folders/Objetos/Entities.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"wall",
+    "path":"objects/wall/wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"wall_spr",
-    "path":"sprites/wall_spr/wall_spr.yy",
+    "name":"wallDoors_spr",
+    "path":"sprites/wallDoors_spr/wallDoors_spr.yy",
   },
   "spriteMaskId":null,
   "visible":false,

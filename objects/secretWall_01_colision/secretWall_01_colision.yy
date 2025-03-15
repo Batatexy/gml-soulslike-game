@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite32",
-    "path":"sprites/Sprite32/Sprite32.yy",
+    "name":"wallDoors_spr",
+    "path":"sprites/wallDoors_spr/wallDoors_spr.yy",
   },
   "spriteMaskId":null,
   "visible":false,

@@ -1,5 +1,5 @@
-trigger=0
-triggertime=50
-sides=0
+trigger = 0
+triggertimer = 50
 
-spd=5
+sides = 0
+spd = 5
