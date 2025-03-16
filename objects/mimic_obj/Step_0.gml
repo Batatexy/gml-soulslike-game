@@ -1,6 +1,6 @@
-if player_obj.life > 0
+if obj_player.life > 0
 {
-	move_towards_point(player_obj.x,player_obj.y,spd)
+	move_towards_point(obj_player.x,obj_player.y,spd)
 }
 else
 {
@@ -9,13 +9,13 @@ else
 	image_index = 0
 }
 
-if atkmode=0//Modo de ataque OFF
+if atkmode = 0//Modo de ataque OFF
 {
-sprite_index = chest_spr
-	if open = 0 and place_meeting(x,y,player_obj) and player_obj.actions[4]
+sprite_index = spr_chest
+	if open = 0 and place_meeting(x,y,obj_player) and obj_player.actions[4]
 	{
 		// Abriu o bau kkkkkkkkk
-		player_obj.canMove = false
+		obj_player.canMove = false
 		open = 1
 		audio_play_sound(opensound,0,false)
 	}
@@ -36,9 +36,9 @@ sprite_index = chest_spr
 			spdtimer = 60
 			image_index = 0
 			open = 0
-			player_obj.life -= 50
+			obj_player.life -= 50
 			atksoundon = 1	
-			player_obj.canMove = true
+			obj_player.canMove = true
 		}	
 	}
 }
@@ -47,7 +47,7 @@ else//Modo de ataque ON
 	image_index = 2
 	spd = defaultSpd
 	
-	if place_meeting(x,y,player_obj)//Mimic encosta no Player
+	if place_meeting(x,y,obj_player)//Mimic encosta no Player
 	{
 		spd = 0
 		atkmode = 0
@@ -55,10 +55,10 @@ else//Modo de ataque ON
 		noatktimer = 1
 		image_index = 0
 		
-		if player_obj.playerhit = 0
+		if obj_player.playerhit = 0
 		{
-			player_obj.life -= dmg
-			player_obj.playerhit = 1
+			obj_player.life -= dmg
+			obj_player.playerhit = 1
 		}
 	}
 }
@@ -78,25 +78,25 @@ if atksoundon = 1
 {
 	atksound = irandom_range(1,3)
 	
-	if atksound = 1{audio_play_sound(Mimic6,0,false,0.6)}
-	if atksound = 2{audio_play_sound(Mimic7,0,false,0.6)}
-	if atksound = 3{audio_play_sound(Mimic8,0,false,0.6)}
+	if atksound = 1{audio_play_sound(sfx_mimic_atk_02,0,false,0.6)}
+	if atksound = 2{audio_play_sound(sfx_mimic_atk_01,0,false,0.6)}
+	if atksound = 3{audio_play_sound(sfx_mimic_atk_03,0,false,0.6)}
 	
 	atksoundon = 0
 }
 ///////////////////////Dano que o bau toma/////////////////////////////////////////////////////////
-if place_meeting(x,y,weapon_obj) and hit = 0 and noatktimer = 0 and player_obj.atk = 1
+if place_meeting(x,y,obj_weapon) and hit = 0 and noatktimer = 0 and obj_player.atk = 1
 {
 	hit = 1
 	dmgsound = irandom_range(1,3)
 	
-	if dmgsound = 1{audio_play_sound(Mimic1,0,false,0.6)}
-	if dmgsound = 2{audio_play_sound(Mimic2,0,false,0.6)}
-	if dmgsound = 3{audio_play_sound(Mimic3,0,false,0.6)}
+	if dmgsound = 1{audio_play_sound(sfx_mimic_hit_01,0,false,0.6)}
+	if dmgsound = 2{audio_play_sound(sfx_mimic_hit_02,0,false,0.6)}
+	if dmgsound = 3{audio_play_sound(sfx_mimic_hit_03,0,false,0.6)}
 	
-	if player_obj.atk = 1
+	if obj_player.atk = 1
 	{
-		life -= player_obj.dmg
+		life -= obj_player.dmg
 	}
 }
 

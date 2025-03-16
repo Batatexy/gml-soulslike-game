@@ -22,9 +22,9 @@ atksound=0
 atksoundon=0
 
 opensound=irandom(6)
-if opensound=1{opensound=Bau1}
-if opensound=2{opensound=Bau2}
-if opensound=3{opensound=Bau3}
-if opensound=4{opensound=Bau4}
-if opensound=5{opensound=Bau5}
-if opensound=6{opensound=Bau6}
+if opensound=1{opensound=sfx_openingChest_01}
+if opensound=2{opensound=sfx_openingChest_02}
+if opensound=3{opensound=sfx_openingChest_03}
+if opensound=4{opensound=sfx_openingChest_04}
+if opensound=5{opensound=sfx_openingChest_05}
+if opensound=6{opensound=sfx_openingChest_06}
