@@ -31,6 +31,9 @@ for (var i = 0; i < array_length(buttons); i++)
 
 if life > 0
 {
+	//Direção do Ataque é sempre em direção ao Mouse
+	directionAtk = point_direction(x, y, mouse_x, mouse_y)
+	
 	//Abrir baus, portas
 	if canMove
 	{

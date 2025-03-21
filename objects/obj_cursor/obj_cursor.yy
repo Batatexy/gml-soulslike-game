@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fog_obj",
+  "%Name":"obj_cursor",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_fog_obj",
+  "name":"obj_cursor",
   "overriddenProperties":[],
   "parent":{
     "name":"Instances",
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_fog",
-    "path":"sprites/spr_fog/spr_fog.yy",
+    "name":"spr_cursor",
+    "path":"sprites/spr_cursor/spr_cursor.yy",
   },
   "spriteMaskId":null,
   "visible":true,

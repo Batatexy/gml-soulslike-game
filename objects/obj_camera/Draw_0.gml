@@ -58,7 +58,9 @@ draw_set_color(c_white)
 
 
 
-//draw_text(x,y,player_obj.keys)
-//draw_text(x,y+ 15,player_obj.doors)
+draw_text(x,y,obj_player.atkWall)
+draw_text(x,y + 15,obj_player.atkWallTimer)
+
+
 
 

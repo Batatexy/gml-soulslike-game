@@ -1,1 +1,0 @@
-touchedFog = 0

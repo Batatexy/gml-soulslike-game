@@ -15,7 +15,7 @@ global.weapons =
 		unlocked: true,
 		type: "swing",
 		angleIncrease: 6.7,
-		dmg: 4,
+		dmg: 70,
 		spdatk: 0.35,
 		atktimer: 30,
 		sprites: [spr_sword_01_atk_02, spr_sword_01_atk_01]
@@ -24,12 +24,12 @@ global.weapons =
 	{
 		unlocked: false,
 		type: "thrust",
-		dmg: 3,
+		dmg: 20,
 		spdatk: 0.2,
 		atktimer: 30,
 		sprites: [spr_spear_01]
 	},
-	//
+	//Espada Vermelha
 	{
 		unlocked: false,
 		type: "swing",
@@ -49,7 +49,8 @@ global.weapons =
 	},
 ]
 
-
+//Quando um inimigo morre, sua instancia é salva aqui
+global.deadEnemys = []
 
 
 

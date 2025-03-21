@@ -30,3 +30,4 @@ canMove = true
 	defaultSpd = 1.8
 	spd = defaultSpd
 	
+directionAtk = noone

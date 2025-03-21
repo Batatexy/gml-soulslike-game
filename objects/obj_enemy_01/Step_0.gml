@@ -1,10 +1,9 @@
 event_inherited();
 
-if visible = true and spawnnumber > 0
+if life > 0
 {
 	if atk = 0 and hit = 0 and distance_to_object(obj_player) < distance and obj_player.visible = true
 	{
-		//Desenvolver um sistema de id mesmo com vários objetos iguais
 		sides += 1
 		
 		var weapon = instance_create_layer(x, y, "EnemyWeapons", obj_weapon)
@@ -64,7 +63,7 @@ if visible = true and spawnnumber > 0
 		speed = 0
 	}
 
-	if place_meeting(x,y,obj_weapon) and hit = 0 and obj_player.atk != 0
+	if place_meeting(x, y, obj_weapon) and hit = 0 and obj_player.atk != 0
 	{
 		hit = 1
 		if obj_player.atk = 1
@@ -86,30 +85,5 @@ if visible = true and spawnnumber > 0
 		}
 	}
 }
-
-if life <= 0 and visible = true
-{
-	spawnnumber -= 1
-	visible = false
-	sprite_index = spr_hollow
-
-	if spawnnumber <= 0
-	{
-		visible = false
-		sprite_index = spr_hollow
-	}
-}
-
-
-
-
-//if global.morte=3
-//{
-//	x=spawnx
-//	y=spawny
-//	visible=true
-//	//Criar um esquema de aleatoridade de vida
-//	life=lifevar
-//}
 
 
