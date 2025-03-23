@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_mimic_atk_02",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.312,
+  "name":"sfx_mimic_atk_02",
+  "parent":{
+    "name":"Mimic",
+    "path":"folders/Sounds/Enemies/Mimic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_mimic_atk_02.mp3",
+  "type":0,
+  "volume":1.0,
+}
