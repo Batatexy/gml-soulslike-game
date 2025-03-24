@@ -1,3 +1,5 @@
+global.pause = false
+
 //Armas liberadas
 global.weapons = 
 [
