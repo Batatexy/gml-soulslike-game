@@ -175,7 +175,7 @@ if !global.pause
 	{
 		deathTrigger = true
 		life = 0
-		obj_aim.image_alpha -= 0.025
+		obj_cursor.image_alpha -= 0.025
 	
 		atk = false
 		speed = 0
@@ -192,7 +192,7 @@ if !global.pause
 		if deathTimer = 655
 		{
 			obj_camera.smooth = 1
-			obj_aim.image_alpha = 1
+			obj_cursor.image_alpha = 1
 		
 			//Tp nas fogueiras
 			x = global.tpplacex

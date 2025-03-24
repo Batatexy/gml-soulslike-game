@@ -1,8 +1,5 @@
 event_inherited();
 
-maxLife = 60
-life = maxLife
-
 selectedWeapon = 3
 
 //Variaveis de ataque

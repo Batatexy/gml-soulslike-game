@@ -1,6 +1,10 @@
 event_inherited();
 
+maxLife = 150
+life = maxLife
 
+maxStamina = 100
+stamina = maxStamina
 
 //Botões
 buttons =
@@ -24,8 +28,6 @@ buttons =
 
 //Ações a partir dos botões
 actions = []
-
-	
 
 //Hitbox com paredes e portas
 hb = 4

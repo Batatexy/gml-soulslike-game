@@ -17,7 +17,7 @@ global.weapons =
 		unlocked: true,
 		type: "swing",
 		angleIncrease: 6.7,
-		dmg: 70,
+		dmg: 50,
 		spdatk: 0.35,
 		atktimer: 30,
 		sprites: [spr_sword_01_atk_02, spr_sword_01_atk_01]
@@ -26,7 +26,7 @@ global.weapons =
 	{
 		unlocked: false,
 		type: "thrust",
-		dmg: 20,
+		dmg: 60,
 		spdatk: 0.2,
 		atktimer: 30,
 		sprites: [spr_spear_01]
@@ -36,7 +36,7 @@ global.weapons =
 		unlocked: false,
 		type: "swing",
 		angleIncrease: 4.5,
-		dmg: 5,
+		dmg: 61,
 		spdatk: 0.05,
 		atktimer: 50,
 		sprites: [spr_sword_02_atk_02, spr_sword_02_atk_01]

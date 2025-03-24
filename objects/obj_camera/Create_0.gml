@@ -38,4 +38,3 @@ youDiedAlphaVar = 0
 youDiedAlpha = youDiedAlphaVar
 
 
-

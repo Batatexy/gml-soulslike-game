@@ -1,5 +1,4 @@
-//ideia de quando a espada bater na parede:
-quando atacar a parede, reduz em 1/3 do dano
-segundo ataque em sequencia, reduz 2/3 do dano
-terceiro não ataca, ele trava na parede
-reseta
+//Ideia de fundo, copiar abismo?
+
+quando não tem fundo e tem tileset, ele fica meio que no limbo, 
+mas tem q ter uma parede invisível antes de chegar na borda

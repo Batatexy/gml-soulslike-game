@@ -16,7 +16,7 @@ if !global.pause
 	
 		if atkWall = 0
 		{
-			dmg = global.weapons[0].dmg
+			dmg = global.weapons[selectedWeapon].dmg
 		}
 		else if atkWall = 1
 		{

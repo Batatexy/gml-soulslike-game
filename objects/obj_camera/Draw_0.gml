@@ -1,3 +1,58 @@
+//Barra de Vida e Stamina do Player
+draw_set_alpha(0.75)
+var cameraX = x - 206
+var cameraY = y - 114
+
+var division = 3
+
+//Hud
+draw_rectangle_colour(cameraX + 1, cameraY + 1, cameraX + obj_player.maxLife / division, cameraY + 7, 100, 100, 100, 100, false);
+draw_rectangle_colour(cameraX + 1, cameraY + 9, cameraX + obj_player.maxStamina / division, cameraY + 15, 100, 100, 100, 100, false);
+
+draw_set_alpha(1)
+if obj_player.life > 0
+{
+	draw_rectangle_colour(cameraX + 1, cameraY + 1, cameraX + obj_player.life / division, cameraY + 7, c_red, c_red, c_red, c_red, false);
+}
+
+if obj_player.stamina > 0
+{
+	draw_rectangle_colour(cameraX + 1, cameraY + 9, cameraX + obj_player.stamina / division, cameraY + 15, c_green, c_green, c_green, c_green, false);
+}
+
+//dmg
+draw_set_alpha(1)
+draw_set_color(c_white)
+draw_text(x-206, y+96, "dmg:" + string(obj_player.dmg))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //You Died
 if obj_player.deathTimer > 660 and obj_player.deathTimer < 990
 {
@@ -44,23 +99,3 @@ draw_rectangle
 	y + window_get_height(),
 	false
 )
-
-
-
-draw_set_alpha(1)
-draw_set_color(c_white)
-
-//for (var i = 0; i < array_length(player_obj.buttons); i++)
-//{
-//	draw_text(x,y, player_obj.buttons[i])
-//	draw_text(x,y + 20, player_obj.actions[i])
-//}
-
-
-
-draw_text(x,y,obj_player.atkWall)
-draw_text(x,y + 15,obj_player.atkWallTimer)
-
-
-
-

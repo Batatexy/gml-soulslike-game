@@ -17,8 +17,8 @@ if !global.pause
 		//Seguir o player ou voltar pro spawn
 		if atk
 		{
-			spd = 0
-			speed = 0
+			//spd = 0
+			//speed = 0
 
 			if path_exists(path)
 			{

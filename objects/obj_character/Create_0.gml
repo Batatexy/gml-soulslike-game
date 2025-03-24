@@ -1,8 +1,8 @@
 //Vida e Stamina
-maxLife = 100 //Vida máxima
+maxLife = 1 //Vida máxima
 life = maxLife
 
-maxStamina = 10 //Stamina máxima
+maxStamina = 1 //Stamina máxima
 stamina = maxStamina
 
 //Ataque
@@ -29,9 +29,11 @@ hittimer = hitvar
 canMove = true
 
 	//Velocidade de movimento
-	defaultSpd = 1.8
+	defaultSpd = 1.5
 	spd = defaultSpd
 	
 directionAtk = noone
 
 spawnnumber = 10
+
+
