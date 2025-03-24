@@ -5,15 +5,8 @@ function WeaponSwing(object, value, sprite)
 
 	if object.atktimer >= global.weapons[object.selectedWeapon].atktimer - 2
 	{
-		var add = 0;
-		
-		if (object.object_index == obj_player)
-		{
-			add += (value * 270)
-		}
-		
-		image_angle = object.directionAtk + add
-		direction = object.directionAtk + add
+		image_angle = object.directionAtk + (value * 270)
+		direction = object.directionAtk + (value * 270)
 	}
 	if object.atktimer >= 0
 	{

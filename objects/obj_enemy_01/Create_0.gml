@@ -1,9 +1,9 @@
 event_inherited();
 
-selectedWeapon = 3
+maxLife = 60
+life = maxLife
 
-//Variaveis de vida
-spawnnumber = 10
+selectedWeapon = 3
 
 //Variaveis de ataque
 distance = 32

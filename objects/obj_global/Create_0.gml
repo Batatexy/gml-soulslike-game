@@ -55,6 +55,10 @@ global.weapons =
 global.deadEnemys = []
 
 
+//Timer que se toma o dano pra n ficar igual mineirinho
+global.hitvar = 28//Variavel fixa para o Player e Inimigos
+global.hittimer = global.hitvar
+
 
 global.triggerenemyvar = 300
 global.triggerenemy1 = global.triggerenemyvar

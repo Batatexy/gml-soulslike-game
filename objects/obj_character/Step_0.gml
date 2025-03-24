@@ -1,5 +1,10 @@
 if !global.pause
 {
+	if instance_exists(obj_player) and object_index != obj_player
+	{
+		directionAtk = point_direction(x,y,obj_player.x,obj_player.y)
+	}
+	
 
 	//Troca de lado de ataque do Player
 	if life > 0
@@ -28,6 +33,50 @@ if !global.pause
 	
 	
 	
+	
+	
+	
+	
+		if atk
+		{
+			atktimer -= 1
+			spd = defaultSpd * global.weapons[selectedWeapon].spdatk
+
+			if atktimer <= 0
+			{
+				atk = false
+				spd = defaultSpd
+				atktimer = global.weapons[selectedWeapon].atktimer
+			}
+		}
+		else
+		{
+			atktimer = global.weapons[selectedWeapon].atktimer
+			
+			if !hit
+			{
+				spd = defaultSpd
+			}
+			
+			//Resetar o wall trigger quando nao estiver atacando
+			atkWallTrigger = true
+		}
+	
+	
+	
+		if hit
+		{
+			hittimer -= 1
+			spd /= 1.05
+			image_index = 1
+
+			if hittimer <= 0
+			{
+				image_index = 0
+				hittimer = hitvar
+				hit = false
+			}
+		}
 	
 	
 	
@@ -62,11 +111,7 @@ if !global.pause
 			}
 		}
 
-		//Resetar o wall trigger quando nao estiver atacando
-		if atk = 0
-		{
-			atkWallTrigger = true
-		}
+		
 		
 	}
 	else

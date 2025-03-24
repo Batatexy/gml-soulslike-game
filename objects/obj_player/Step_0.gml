@@ -42,30 +42,18 @@ if !global.pause
 		//Abrir baus, portas
 		if canMove
 		{
-			if actions[13] and selectedWeapon != 0 and atk = 0 and hit = 0 
+			if actions[13] and selectedWeapon != 0 and !atk and !hit
 			{
-				spd = defaultSpd * global.weapons[selectedWeapon].spdatk
-				atk = 1
+				atk = true
 				sides += 1
-				atktimer = global.weapons[selectedWeapon].atktimer
-			
-				var weapon = instance_create_layer(x, y, "PlayerWeapons", obj_weapon)
+				
+				var weapon = instance_create_layer(x, y, "PlayerWeapons", obj_weaponPlayer)
 				weapon.object = self
 			}
 
-			if atk = 1
-			{
-				atktimer -= 1
+			
 
-				if atktimer <= 0
-				{
-					spd = defaultSpd
-					atktimer = global.weapons[selectedWeapon].atktimer
-					atk = 0
-				}
-			}
-
-			if atk = 0
+			if !atk
 			{
 				if actions[9] and global.weapons[0].unlocked = true
 				{
@@ -84,25 +72,23 @@ if !global.pause
 					selectedWeapon = 4
 				}
 			}
-		
-			//Melhorar
-			if place_meeting(x,y,obj_weapon) and obj_weapon.object != self
+			
+			
+			
+			if place_meeting(x,y,obj_weaponEnemy) and !hit
 			{
-				hit = 1
+				life -= obj_weaponEnemy.object.dmg
+				hit = true
 			}
-   
+			
+			
+			
+		
 			//Tomar Dano
-			if hit = 1
+			if hit
 			{
-				hittimer -= 1
 				image_index = 1
 				image_alpha = 0.5
-		
-				if hittimer <= 0
-				{
-					hittimer = hitvar
-					hit = 0
-				}
 			}
 			else
 			{
@@ -191,7 +177,7 @@ if !global.pause
 		life = 0
 		obj_aim.image_alpha -= 0.025
 	
-		atk = 0
+		atk = false
 		speed = 0
 		spd = 0
 		global.tp = 1
@@ -217,7 +203,7 @@ if !global.pause
 		if deathTimer = 650
 		{
 			life = maxLife
-			atk = 2
+			//atk = 2
 		}
 
 		//Reviver // Começa caminhando meio lento
@@ -228,7 +214,7 @@ if !global.pause
 			if spd >= defaultSpd
 			{
 				spd = defaultSpd
-				atk = 0
+				atk = false
 				global.tp = 0
 			}
 		}

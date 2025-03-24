@@ -1,8 +1,9 @@
 if !global.pause
 {
-
-	if object.atk = 1 and instance_exists(object)
+	//Atk = true
+	if object.atk and instance_exists(object)
 	{
+		
 		//Armas que rodam:
 		if global.weapons[object.selectedWeapon].type = "swing"
 		{
@@ -112,7 +113,7 @@ if !global.pause
 	
 		}
 	}
-	//Atk = 0
+	//Atk = false
 	else
 	{
 		instance_destroy()

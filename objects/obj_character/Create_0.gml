@@ -7,7 +7,7 @@ stamina = maxStamina
 
 //Ataque
 dmg = 0
-atk = 0
+atk = false
 atktimer = 0
 sides = 0
 
@@ -21,7 +21,9 @@ selectedWeapon = 0
 	atkWallTimer = atkWallTimerVar
 
 //Tomar Dano
-hit = 0
+hit = false
+hitvar = global.hitvar
+hittimer = hitvar
 
 //Movimentação:
 canMove = true
@@ -31,3 +33,5 @@ canMove = true
 	spd = defaultSpd
 	
 directionAtk = noone
+
+spawnnumber = 10

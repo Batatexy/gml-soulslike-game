@@ -25,12 +25,7 @@ buttons =
 //Ações a partir dos botões
 actions = []
 
-	//Timer que se toma o dano pra n ficar igual mineirinho
-	global.hitvar = 28//Variavel fixa para o Player e Inimigos
-	global.hittimer = global.hitvar
-	hitvar = global.hitvar
-	hittimer = hitvar
-
+	
 
 //Hitbox com paredes e portas
 hb = 4

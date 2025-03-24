@@ -12,7 +12,8 @@ if !global.pause
 		image_index = 0
 	}
 
-	if atkmode = 0//Modo de ataque OFF
+	//Modo de ataque OFF
+	if atkmode = 0
 	{
 	sprite_index = spr_chest
 		if open = 0 and place_meeting(x,y,obj_player) and obj_player.actions[4]
@@ -88,22 +89,22 @@ if !global.pause
 		atksoundon = 0
 	}
 	///////////////////////Dano que o bau toma/////////////////////////////////////////////////////////
-	if place_meeting(x,y,obj_weapon) and hit = 0 and noatktimer = 0 and obj_player.atk = 1
+	if place_meeting(x,y,obj_weapon) and !hit and noatktimer = 0 and obj_player.atk
 	{
-		hit = 1
+		hit = true
 		dmgsound = irandom_range(1,3)
 	
 		if dmgsound = 1{audio_play_sound(sfx_mimic_hit_01,0,false,0.6)}
 		if dmgsound = 2{audio_play_sound(sfx_mimic_hit_02,0,false,0.6)}
 		if dmgsound = 3{audio_play_sound(sfx_mimic_hit_03,0,false,0.6)}
 	
-		if obj_player.atk = 1
+		if obj_player.atk
 		{
 			life -= obj_player.dmg
 		}
 	}
 
-	if hit = 1
+	if hit
 	{
 		hittimer -= 1
 	
@@ -122,7 +123,7 @@ if !global.pause
 			//sprite_index = Sprite8
 			hittimer = hitvar
 			atkmode = 1
-			hit = 0
+			hit = false
 		}
 	}
 
